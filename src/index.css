@@ -1,0 +1,30 @@
+@import './typography.css';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body, html {
+  height: 100%;
+}
+
+body {
+  @apply antialiased;
+}
+
+.menu {
+  @apply bg-white space-y-1 rounded border-2 border-black w-56 focus:outline-none;
+}
+
+.menu-item {
+  @apply flex items-center gap-2 font-medium p-1.5 rounded cursor-pointer focus:outline-none;
+
+  &[data-active-item="true"] {
+    @apply bg-black/5 ring-2 ring-black;
+  }
+
+  &[aria-selected="true"] {
+    .checkbox {
+      @apply bg-black text-white;
+    }
+  }
+}
