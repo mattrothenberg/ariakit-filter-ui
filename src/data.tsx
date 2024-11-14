@@ -11,7 +11,6 @@ export const filterOptions: Record<string, FilterOption> = {
 		id: "language",
 		icon: Translate,
 		label: "Language",
-		combobox: true,
 		choices: [
 			"JavaScript",
 			"TypeScript",
